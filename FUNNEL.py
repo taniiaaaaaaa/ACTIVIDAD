@@ -14,15 +14,11 @@ def reemplazos(v):
 pip.main(['install', 'plotly_express'])
 pip.main(["install","openpyxl"])
 
-st.title("FUNNEL Y TRACKING DE INVER+")
-st.text('La presente página permite visualizar el comportamiento generalizado de los socios en la aplicacion.')
-#df=pd.read_excel('PROCESOS_PIVOTE.xlsx')
-
-#df_2=pd.read_csv('APROBADOS.csv')
-#st.write(df_2)
-
-st.markdown(f' FUNNEL')
-df=pd.read_csv('FUNEL (1).csv',encoding='latin-1')
+st.title("ACTIVIDAD")
+st.text('La presente página permite visualizar la actividad de los socios en el tiempo.')
+st.markdown(f' Actividad')
+df=pd.read_csv('ACTIVIDAD.csv',encoding='latin-1')
+df=df.rename(columns={'Unnamed: 0':'Fecha'})
 #fig = px.funnel(data, x='number', y='stage')
 #st.ploty_chart(fig)
 #fig.show()
