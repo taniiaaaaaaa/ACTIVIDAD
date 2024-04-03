@@ -19,7 +19,7 @@ st.text('La presente página permite visualizar la actividad de los socios en el
 st.markdown(f' Actividad')
 df=pd.read_csv('ACTIVIDAD (1).csv',encoding='latin-1')
 df=df.set_index('FECHAS')
-df=df[['SOCIOS','ACTIVOS','INACTIVOS']]
+df=df['aLTAS SOCIOS','BAJAS SOCIOS']
 #fig = px.funnel(data, x='number', y='stage')
 #st.ploty_chart(fig)
 #fig.show()
