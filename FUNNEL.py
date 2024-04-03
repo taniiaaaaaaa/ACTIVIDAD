@@ -15,21 +15,15 @@ pip.main(['install', 'plotly_express'])
 pip.main(["install","openpyxl"])
 
 st.title("ACTIVIDAD")
-st.text('La presente página permite visualizar la actividad de los socios en el tiempo.')
-st.markdown(f' Actividad')
+st.text('La presente página permite visualizar la actividad de los socios en el tiempo, tal como se puede ver en la siguiente tabla de valores.')
+st.markdown(f' Tabla de actividad de socios')
 df=pd.read_csv('ACTIVIDAD (1).csv',encoding='latin-1')
+st.write(df)
+
+st.text('La cual puede ser representada por medio de la siguiente gráfica.')
 df=df.set_index('FECHAS')
 df=df.drop('ALTAS SOCIOS',axis=1)
 df=df.drop('BAJAS SOCIOS',axis=1)
 df=df.drop('Unnamed: 0',axis=1)
-#fig = px.funnel(data, x='number', y='stage')
-#st.ploty_chart(fig)
-#fig.show()
-#st.image('FUNNEL.png',caption='ACTIVIDAD REGISTRADA PARA CADA UNA DE LAS PANTALLAS')
-#data = dict(
- #   number=[39, 27.4, 20.6, 11, 2],
-  #  stage=["Website visit", "Downloads", "Potential customers", "Requested price", "invoice sent"])
-#fig = px.funnel(df, x=df['FRECUENCIA'], y=df['PASO'])
 st.line_chart(df)
-
 
