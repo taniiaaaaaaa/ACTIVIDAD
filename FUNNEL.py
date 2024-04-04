@@ -30,5 +30,10 @@ df=df.drop('BAJAS SOCIOS ',axis=1)
 st.line_chart(df)
 
 st.text('Por otro lado se realizó un código capaz de identificar a las personas propensas a la inactividad, el modelo es conocido como XGBoost y fue capáz de tener una exactitud del 87.52%, resultados corroborados al identificar de manera correcta a 75449 socios activos y a 98777 socios inactivos, tal y como se ve en la siguiente gráfica.')
-st.image('BARRAS.png', caption="Mi imagen")
+st.image('BARRAS.png', caption="MATRIZ DE CONFUSION")
+
+st.text('Bajo la predicción del modelo, los siguientes socios son propensos a la inactividad.')
+df=pd.read_csv('RESUMEN_ESTATUS.csv',encoding='latin-1')
+st.write(df)
+
 
