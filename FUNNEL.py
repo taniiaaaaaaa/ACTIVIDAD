@@ -25,6 +25,8 @@ st.text('La cual puede ser representada por medio de la siguiente gráfica.')
 df=df.drop('FECHAS',axis=1)
 df=df.drop('ALTAS SOCIOS',axis=1)
 df=df.drop('BAJAS SOCIOS ',axis=1)
+df['ORIGEN']=df.index
+df=df[['ORIGEN','SOCIOS','ACTIVOS','INACTIVOS']]
 st.line_chart(df)
 
 st.text('Por otro lado se realizó un código capaz de identificar a las personas propensas a la inactividad, el modelo es conocido como XGBoost y fue capáz de tener una exactitud del 87.52%, resultados corroborados al identificar de manera correcta a 75449 socios activos y a 98777 socios inactivos, tal y como se ve en la siguiente gráfica.')
