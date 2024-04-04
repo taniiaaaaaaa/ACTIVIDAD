@@ -25,7 +25,7 @@ st.text('La cual puede ser representada por medio de la siguiente gráfica.')
 df=df.drop('FECHAS',axis=1)
 df=df.drop('ALTAS SOCIOS',axis=1)
 df=df.drop('BAJAS SOCIOS ',axis=1)
-df['ORIGEN']=df.index
+#df['ORIGEN']=df.index
 #df=df[['ORIGEN','SOCIOS','ACTIVOS','INACTIVOS']]
 st.line_chart(df)
 
