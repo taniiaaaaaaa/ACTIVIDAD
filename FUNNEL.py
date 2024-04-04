@@ -23,6 +23,7 @@ st.write(df)
 
 st.text('La cual puede ser representada por medio de la siguiente gráfica.')
 df=df.set_index('FECHAS')
+st.text(df.columns.tolist())
 df=df.drop('ALTAS SOCIOS',axis=1)
 df=df.drop('BAJAS SOCIOS',axis=1)
 st.line_chart(df)
